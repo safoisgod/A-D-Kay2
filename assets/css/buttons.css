@@ -1,0 +1,86 @@
+.main-button-blue a {
+    font-size: 13px;
+    color: #fff;
+    background-color: #64def3;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+  
+.main-button-green a {
+    font-size: 13px;
+    color: #fff;
+    background-color: #7eff9e;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+  
+.main-button-blue a:hover,  .main-button-green a:hover {
+    opacity: 0.9;
+}
+
+/* Styling for the View Me button */
+.book-details .view-me {
+    font-size: 16px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #50c1e0; /* Light blue background */
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .book-details .view-me:hover {
+    color: rgb(0, 0, 0);
+    background-color: #48818b; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+
+
+
+  /* Styling for the Buy button */
+.book-details .buy {
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #0a4049; /* Light blue background */
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .book-details .buy:hover {
+    color: rgb(0, 0, 0);
+    background-color: #7ad6f0; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+
+
+  .author-spotlight .btn {
+    font-size: 13px;
+    color: #fff;
+    background-color: #64def3;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+  }
+  
+  .author-spotlight .btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }

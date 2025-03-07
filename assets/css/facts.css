@@ -1,0 +1,160 @@
+/* Background and Container Styles */
+.our-facts {
+    position: relative;
+    background-image: url();
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    text-align: center;
+  }
+  
+  .our-facts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55); /* Adjusted opacity for better visibility */
+    z-index: 1;
+  }
+  
+  .our-facts .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Title */
+  section.our-facts h2 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Fact Box Styles */
+  .count-area-content {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px 40px;
+    margin: 15px 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .count-area-content:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .count-digit {
+    font-size: 48px;
+    font-weight: 800;
+    color: #64def3;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  
+  .count-title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #fff;
+  }
+  
+  .new-students {
+    margin-top: 45px;
+  }
+  
+  /* Right Side Content: Author Spotlight */
+  .author-spotlight {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  .author-spotlight h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .author-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .author-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .author-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #64def3;
+  }
+  
+  .author-bio {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design Adjustments */
+  @media (max-width: 767px) {
+    section.our-facts h2 {
+      font-size: 32px;
+    }
+  
+    .count-digit {
+      font-size: 36px;
+    }
+  
+    .count-title {
+      font-size: 16px;
+    }
+  
+    .author-spotlight {
+      padding: 20px;
+      text-align: left; /* Makes the content align better */
+    }
+  
+    .author-image {
+      float: left;
+      margin-right: 20px;
+      width: 100px;
+      height: 100px;
+    }
+  
+    .author-name {
+      font-size: 18px;
+    }
+  
+    .author-bio {
+      font-size: 14px;
+    }
+  
+    .author-spotlight .btn {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  
+    /* Stack count-area-content elements for small screens */
+    .count-area-content {
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  

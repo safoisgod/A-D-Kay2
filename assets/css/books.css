@@ -1,0 +1,158 @@
+/* Book Section */
+.book-section {
+  position: relative;
+  background-image: url(); /* Add background image */
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 80px;  /* Space above the carousel */
+  width: 100%;
+}
+
+.book-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55); /* Adjusted opacity for better visibility */
+  z-index: 1;
+}
+
+/* Section Container for Heading and Books */
+.book-section .section-container {
+  width: 75%; /* Same width as the book list */
+  margin: 0 auto; /* Center it within the section */
+  z-index: 2;
+  position: relative; /* Ensure that this is above the background */
+}
+
+/* Section Heading */
+
+.service-section .section-heading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 20px;
+  text-align: left; /* Left align the heading */
+  grid-column: 1 / -1; /* Make the heading span across the whole container */
+  padding-left: 20px; /* Ensure it has some space from the left edge */
+}
+
+.book-section .section-heading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 20px;
+  text-align: left; /* Left align the heading */
+  grid-column: 1 / -1; /* Make the heading span across the whole container */
+  padding-left: 20px; /* Ensure it has some space from the left edge */
+  padding-left: 0;  /* Align the heading directly with the container */
+  z-index: 3;  /* Ensure the heading is above the books */
+  position: relative; /* Make sure it's positioned above other elements */
+}
+
+/* Book List (Carousel) */
+.book-list {
+  display: flex;
+  justify-content: center;  /* Ensure books are centered */
+  align-items: center;
+  z-index: 2;
+}
+
+.book-item {
+  position: relative;
+  background-color: #fff;
+  margin: 0 10px;
+  width: 250px; /* Fixed width for each book */
+  height: 500px; /* Fixed height for each book */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect - applies light shadow and tint to the entire book */
+.book-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a light shadow */
+}
+
+/* Overlay for content (name, rating, price, and view button) */
+.book-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 105%;
+  background: rgba(0, 0, 0, 0.3); /* Light overlay */
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show overlay when hovered */
+.book-item:hover .book-overlay {
+  opacity: 1;
+}
+
+/* Center the content within the overlay */
+.book-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.book-details .book-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.book-details .rating {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.book-details .rating .checked {
+  color: orange;
+}
+
+.book-details .price {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.book-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive tweaks for small screens */
+@media (max-width: 768px) {
+  .book-item {
+    width: 100px;
+    height: 400px;
+  }
+}
