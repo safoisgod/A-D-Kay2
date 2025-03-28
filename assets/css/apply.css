@@ -1,0 +1,274 @@
+/* Container Styling */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    position: relative;
+}
+
+/* Section Title */
+h2.section-title {
+    font-size: 2rem;
+    color: #64def3;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+h2.section-title::before,
+h2.section-title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0;
+    background-color: #64def3;
+}
+
+h2.section-title::before {
+    width: 18px;
+    height: 18px;
+}
+
+h2.section-title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+/* Job Listings Section */
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.job-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-left: 4px solid #64def3;
+}
+
+.job-card:hover {
+    transform: translateY(-10px);
+}
+
+.job-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.job-card p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Apply Button Styling */
+.apply-btn {
+    display: inline-block;
+    background-color: #64def3;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.apply-btn:hover {
+    background-color: #00bcd4;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(100, 222, 243, 0.4);
+    color: #fff;
+}
+
+.apply-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: all 0.5s ease;
+}
+
+.apply-btn:hover::after {
+    left: 100%;
+}
+
+/* Application Form Section */
+#application-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+form#appForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form#appForm h3 {
+    font-size: 1.5rem;
+    color: #64def3;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.col-lg-4, .col-lg-12 {
+    position: relative;
+}
+
+.col-lg-4 {
+    flex: 0 0 calc(33.33% - 15px);
+}
+
+.col-lg-12 {
+    flex: 0 0 100%;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    position: relative;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+    border-color: #64def3;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #64def3;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Floating label effect */
+fieldset::after {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #666;
+    font-size: 0.9em;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+#fullName:placeholder-shown + fieldset::after { content: "YOUR FULL NAME...*"; }
+#email:placeholder-shown + fieldset::after { content: "YOUR EMAIL...*"; }
+#phone:placeholder-shown + fieldset::after { content: "YOUR PHONE NUMBER...*"; }
+#position:placeholder-shown + fieldset::after { content: "SELECT A POSITION...*"; }
+#coverLetter:placeholder-shown + fieldset::after { content: "YOUR COVER LETTER...*"; }
+#otherPosition:placeholder-shown + fieldset::after { content: "PLEASE SPECIFY THE POSITION"; }
+
+input:focus + fieldset::after,
+input:valid + fieldset::after,
+select:focus + fieldset::after,
+select:valid + fieldset::after,
+textarea:focus + fieldset::after,
+textarea:valid + fieldset::after {
+    top: -10px;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: #64def3;
+    background: #fff;
+    padding: 0 5px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    border: none;
+    outline: none;
+    background-color: #64def3;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #00bcd4;
+    transform: scale(1.05);
+}
+
+/* Other Position Input */
+#otherPositionInput {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-listings {
+        grid-template-columns: 1fr;
+    }
+
+    .col-lg-4 {
+        flex: 0 0 100%;
+    }
+
+    .col-lg-9 {
+        flex: 0 0 100%;
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}

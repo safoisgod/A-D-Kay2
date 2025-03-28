@@ -1,0 +1,230 @@
+/* ================================ */
+/*       AUTHOR LIST SECTION      */
+/* ================================ */
+
+.author-list-section {
+    position: relative;
+    background: url(../images/background/bookshelve.jpg) center center fixed no-repeat;
+    background-size: cover;
+    padding: 60px 50px;
+}
+
+.author-list-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75); /* Darker overlay from first instance */
+    z-index: 1;
+}
+
+.author-list-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.author-list-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+/* ================================ */
+/*       AUTHOR GRID STYLES        */
+/* ================================ */
+
+.author-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.author-card {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.author-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.author-card h3 {
+    font-size: 1.4rem;
+    margin-top: 15px;
+    color: #64def3;
+}
+
+.author-role {
+    font-size: 1rem;
+    color: #888;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.author-bio {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 10px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.read-more,
+.ad-author-details .social-links a {
+    display: inline-block;
+    font-size: 1rem;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.read-more {
+    margin-top: 15px;
+}
+
+.author-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================================ */
+/*       AUTHOR DETAILS SECTION   */
+/* ================================ */
+
+.author-details-section {
+    padding: 60px 50px;
+    background-color: #f9f9f9;
+}
+
+.author-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.ad-author-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 20%;
+    margin-right: 30px;
+}
+
+.author-info {
+    max-width: 800px;
+}
+
+.author-info h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.author-info .author-role {
+    font-size: 1.4rem;
+    color: #64def3;
+    font-weight: bold;
+}
+
+.author-info .author-bio {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.author-info .author-full-bio {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+
+.ad-author-details {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.ad-author-details h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+.ad-author-details ul,
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.ad-author-details ul li {
+    font-size: 1rem;
+    color: #555;
+}
+
+.ad-author-details .social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.read-more:hover,
+.ad-author-details .social-links a:hover {
+    color: #1e88e5;
+}
+
+
+/* ================================ */
+/*       RESPONSIVE DESIGN        */
+/* ================================ */
+
+@media (max-width: 768px) {
+    .author-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .author-card {
+        padding: 15px;
+    }
+
+    .author-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .author-bio {
+        font-size: 0.95rem;
+    }
+
+    .author-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .author-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 0 20px;
+    }
+
+    .author-info h1 {
+        font-size: 2rem;
+    }
+
+    .author-info .author-role {
+        font-size: 1.2rem;
+    }
+
+    .author-info .author-bio {
+        font-size: 1rem;
+    }
+
+    .ad-author-details h3 {
+        font-size: 1.3rem;
+    }
+}
