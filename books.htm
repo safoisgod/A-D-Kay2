@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Collection - A-D Kay Publications</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+ 
+    <link rel="stylesheet" href="assets/css/main-style.css">
+    <link rel="stylesheet" href="assets/css/books.css"> 
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header-space">
+        <nav class="navigation-space">
+            <div class="left-side">
+                <a href="index.htm"><img class="logo" src="assets/images/A-D KAY-nb1.png" alt="Logo"></a>
+            </div>
+            <div class="right-side">
+                <ul class="menu-space">
+                  <li><a href="index.htm">HOME</a></li>
+                  <li><a href="books.htm">BOOK COLLECTION</a></li>
+                  <li><a href="authors.htm">AUTHORS</a></li>
+                  <li><a href="blogs.htm">BLOG</a></li>
+                  <li><a href="#about">ABOUT US</a></li>
+                  <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+                <label class="hamburger-icon">
+                  <input type="checkbox" id="hamburger-checkbox">
+                  <svg viewBox="0 0 32 32">
+                      <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                      <path class="line" d="M7 16 27 16"></path>
+                  </svg>
+              </label>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search and Filter Section -->
+    <section class="search-filter-section">
+        <div class="search-filter-container">
+            <!-- Search Box and Filter side by side -->
+            <div class="search-filter-box">
+                <input type="text" class="search-box" placeholder="Search for books,authors..." />
+                <select class="filter-box">
+                    <option value="all">All Categories</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="history">History</option>
+                    <option value="poetry">Poetry</option>
+                    <option value="young adult">Young Adult</option>
+                    <option value="education">Education</option>
+                    <option value="culture">Culture</option>
+                    <option value="short stories">Short Stories</option>
+                    <option value="wisdom">Wisdom</option>
+                    <option value="romance">Romance</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Collection Section -->
+    <section class="book-collection-section" id="scroll-stop">
+        <div class="section-container">
+            <div class="bc-book-list">
+                <!-- Book Item 1 -->
+                <div class="bc-book-item" data-category="fiction,history,culture">
+                    <img src="assets/images/books/Culture Brewed in an African Pot.png" alt="Book 1">
+                    <div class="bc-book-overlay">
+                        <div class="bc-book-details">
+                            <div class="bc-book-title">Culture Brewed in an African Pot</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
+                            <p class="bc-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </p>
+                            <a target="_blank" href="book1-details.htm" class="buy" data-tooltip="$3.99">
+                                <div class="button-wrapper">
+                                    <div class="text">Buy</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                              <a href="book1-details.htm" class="view-me">
+                                <div class="button-wrapper">
+                                    <div class="text">View Me</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 2 -->
+                <div class="bc-book-item" data-category="Young Adult,fiction,education">
+                    <img src="assets/images/books/kbi-front.png" alt="Book 2">
+                    <div class="bc-book-overlay">
+                        <div class="bc-book-details">
+                            <div class="bc-book-title">Killed by Illiteracy</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
+                            <p class="bc-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <a target="_blank" href="book2-details.htm" class="buy" data-tooltip="$3.99">
+                                <div class="button-wrapper">
+                                    <div class="text">Buy</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                              <a href="book2-details.htm" class="view-me">
+                                <div class="button-wrapper">
+                                    <div class="text">View Me</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 3 -->
+                <div class="bc-book-item" data-category="Young Adult,fiction,education">
+                    <img src="assets/images/books/kbi-back.png" alt="Book 3">
+                    <div class="bc-book-overlay">
+                        <div class="bc-book-details">
+                            <div class="bc-book-title">Killed by Illiteracy</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
+                            <p class="bc-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <a target="_blank" href="book2-details.htm" class="buy" data-tooltip="$3.99">
+                                <div class="button-wrapper">
+                                    <div class="text">Buy</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                              <a href="book2-details.htm" class="view-me">
+                                <div class="button-wrapper">
+                                    <div class="text">View Me</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 4 -->
+                <div class="bc-book-item" data-category="fiction,short stories,wisdom">
+                    <img src="assets/images/books/owl-wisdom.jpg" alt="Book 4">
+                    <div class="bc-book-overlay">
+                        <div class="bc-book-details">
+                            <div class="bc-book-title">Particles of Wisdom 1</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
+                            <p class="bc-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <a target="_blank" href="book4-details.htm" class="buy" data-tooltip="$3.99">
+                                <div class="button-wrapper">
+                                    <div class="text">Buy</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                              <a href="book4-details.htm" class="view-me">
+                                <div class="button-wrapper">
+                                    <div class="text">View Me</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 5 -->
+                <div class="bc-book-item" data-category="fiction,short stories,wisdom">
+                    <img src="assets/images/books/particles of wisdom.jpg" alt="Book 5">
+                    <div class="bc-book-overlay">
+                        <div class="bc-book-details">
+                            <div class="bc-book-title">Particles of Wisdom 2</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
+                            <p class="bc-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </p>
+                            <a target="_blank" href="book4-details.htm" class="buy" data-tooltip="$3.99">
+                                <div class="button-wrapper">
+                                    <div class="text">Buy</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                              <a href="book4-details.htm" class="view-me">
+                                <div class="button-wrapper">
+                                    <div class="text">View Me</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 6 -->
+                <div class="bc-book-item" data-category="fiction,education">
+                    <img src="assets/images/books/sok-front.jpg" alt="Book 6">
+                    <div class="bc-book-overlay">
+                        <div class="bc-book-details">
+                            <div class="bc-book-title">Son of a King</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
+                            <p class="bc-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <a target="_blank" href="book6-details.htm" class="buy" data-tooltip="$3.99">
+                            <div class="button-wrapper">
+                                <div class="text">Buy</div>
+                                <span class="icon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            </a>
+                            <a href="book6-details.htm" class="view-me">
+                            <div class="button-wrapper">
+                                <div class="text">View Me</div>
+                                <span class="icon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 7 -->
+                <div class="bc-book-item" data-category="Poetry,Romance">
+                    <img src="assets/images/books/M&M.png" alt="Book 7">
+                    <div class="bc-book-overlay">
+                        <div class="bc-book-details">
+                            <div class="bc-book-title">Moonlight & Melodies</div>
+                            <div class="author-name">Necr0se Writes</div>
+                            <p class="bc-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <a target="_blank" href="book7-details.htm" class="buy" data-tooltip="$3.99">
+                            <div class="button-wrapper">
+                                <div class="text">Buy</div>
+                                <span class="icon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            </a>
+                            <a href="book7-details.htm" class="view-me">
+                            <div class="button-wrapper">
+                                <div class="text">View Me</div>
+                                <span class="icon">
+                                    <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 8 -->
+                <div class="bc-book-item" data-category="politics,fiction">
+                    <img src="assets/images/books/Politics for Sale.png" alt="Book 8">
+                    <div class="bc-book-overlay">
+                        <div class="bc-book-details">
+                            <div class="bc-book-title">Politics for Sale</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
+                            <p class="bc-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <a target="_blank" href="book8-details.htm" class="buy" data-tooltip="$3.99">
+                                <div class="button-wrapper">
+                                    <div class="text">Buy</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                              <a href="book8-details.htm" class="view-me">
+                                <div class="button-wrapper">
+                                    <div class="text">View Me</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 9 -->
+                <div class="bc-book-item" data-category="fiction,history">
+                    <img src="assets/images/books/King's Dilemma.png" alt="Book 9">
+                    <div class="bc-book-overlay">
+                        <div class="bc-book-details">
+                            <div class="bc-book-title">The King's Dilemma</div>
+                            <div class="author-name">Nkay</div>
+                            <p class="bc-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <a target="_blank" href="book9-details.htm" class="buy" data-tooltip="$3.99">
+                                <div class="button-wrapper">
+                                    <div class="text">Buy</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                              <a href="book9-details.htm" class="view-me">
+                                <div class="button-wrapper">
+                                    <div class="text">View Me</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 10 -->
+                <div class="bc-book-item" data-category="education,french">
+                    <img src="assets/images/books/french composition.png" alt="Book 10">
+                    <div class="bc-book-overlay">
+                        <div class="bc-book-details">
+                            <div class="bc-book-title">French Composition</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
+                            <p class="bc-rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </p>
+                            <a target="_blank" href="book10-details.htm" class="buy" data-tooltip="$3.99">
+                                <div class="button-wrapper">
+                                    <div class="text">Buy</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                              <a href="book10-details.htm" class="view-me">
+                                <div class="button-wrapper">
+                                    <div class="text">View Me</div>
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                              </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-us" id="contact">
+        <div class="container">
+          <div class="row">
+            <!-- Left side: Contact Form -->
+            <div class="col-lg-9">
+              <form id="contact" action="https://formsubmit.co/4e48fa66b4c7a7ea7ee63c64b72215df" method="post">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Let's Get in Touch</h2>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="name" type="text" id="name" placeholder="YOUR NAME...*" required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" id="message" placeholder="YOUR MESSAGE..." required></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+      
+            <!-- Right side: Contact Info -->
+            <div class="col-lg-3">
+              <div class="right-info">
+                <ul>
+                  <li>
+                    <h6>Phone Number</h6>
+                    <span><a href="tel:+233543550766">+233 54-355-0766</a></span>
+                  </li>
+                  <li>
+                    <h6>Email Address</h6>
+                    <span><a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></span>
+                  </li>
+                  <li>
+                    <h6>Website URL</h6>
+                    <span>www.adkaypublications.com</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      
+      <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo Section -->
+          <div class="footer-logo">
+              <a href="index.htm">
+                  <img src="assets/images/A-D KAY-nb1.png" alt="A-D Kay Logo" class="footer-logo-img">
+              </a>
+          </div>
+  
+          <!-- Quick Links -->
+          <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                  <li><a href="index.htm">Home</a></li>
+                  <li><a href="books.htm">Book Collection</a></li>
+                  <li><a href="authors.htm">Authors</a></li>
+                  <li><a href="404.htm">Blog</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="#contact">Contact Us</a></li>
+              </ul>
+          </div>
+  
+          <!-- Join Us Section -->
+        <div class="footer-join-us">
+          <h4>Join Us</h4>
+          <ul>
+              <li><a href="apply.htm">Careers/Job Opportunities</a></li>
+              <li><a href="join-team.htm">Join Our Team (Volunteer/Internship)</a></li>
+              <li><a href="submit-manuscript.htm">Submit Manuscript for Review</a></li>
+              <li><a href="supoort.htm">Support Us</a></li>
+          </ul>
+        </div>
+  
+          <!-- Social Media Links -->
+          <div class="footer-social">
+              <h4>Follow Us</h4>
+              <ul class="social-links">
+                  <li><a href="https://facebook.com" target="_blank" class="social-icon facebook">
+                      <i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://twitter.com" target="_blank" class="social-icon twitter">
+                      <i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://instagram.com" target="_blank" class="social-icon instagram">
+                      <i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
+                      <i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+          </div>
+        </div>
+  
+        <!-- Copyright & Contact Information -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 A-D Kay Publications. All Rights Reserved.</p>
+          <p>Contact us at <a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></p>
+        </div>
+      </footer>
+
+      
+    <!--EmailJS -->
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+            publicKey: "AIpZSo9e2QEerRRAg",
+            });
+        })();
+    </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const searchBox = document.querySelector('.search-box');
+    const filterBox = document.querySelector('.filter-box');
+    const bookItems = document.querySelectorAll('.bc-book-item'); // Updated to .bc-book-item
+
+    // Function to filter the books
+    function filterBooks() {
+        const searchQuery = searchBox.value.toLowerCase();
+        const selectedCategory = filterBox.value;
+
+        bookItems.forEach(item => {
+            const bookTitle = item.querySelector('.bc-book-title').textContent.toLowerCase(); // Updated to .bc-book-title
+            const bookAuthor = item.querySelector('.author-name').textContent.toLowerCase();
+            const bookCategories = item.getAttribute('data-category').toLowerCase().split(',');
+
+            let matchesSearch = bookTitle.includes(searchQuery) || bookAuthor.includes(searchQuery);
+            let matchesCategory = (selectedCategory === 'all' || bookCategories.includes(selectedCategory.toLowerCase()));
+
+            if (matchesSearch && matchesCategory) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    // Event listeners for search and filter
+    searchBox.addEventListener('input', filterBooks);
+    filterBox.addEventListener('change', filterBooks);
+    });
+
+    // jQuery Section Navigation Script (unchanged unless section class conflicts)
+    var checkSection = function checkSection() {
+        $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+                var
+                currentId = $this.data('section'),
+                reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+                reqLink.closest('li').addClass('active').siblings().removeClass('active');
+            }
+        });
+    };
+
+    // Ensure jQuery and the checkSection function are called appropriately
+    $(document).ready(function() {
+        $(window).on('scroll', checkSection);
+        checkSection(); // Initial call to set active section on page load
+    });
+
+  </script>
+
+</body>
+
+</html>

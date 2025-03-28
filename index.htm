@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-D Kay Publications</title>
+    <title>Home - A-D Kay Publications</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    
-    <!-- Additional CSS Files -->
-     <link rel="stylesheet" href="assets/css/old/owl.css">
-     <link rel="stylesheet" href="assets/css/old/flex-slider.css">
-     <link rel="stylesheet" href="assets/css/old/fontawesome.css">
-     <link rel="stylesheet" href="assets/css/old/lightbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,93 +19,125 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
 
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/banner.css">
-    <link rel="stylesheet" href="assets/css/books.css">
-    <link rel="stylesheet" href="assets/css/service.css">
-    <link rel="stylesheet" href="assets/css/buttons.css">
-    <link rel="stylesheet" href="assets/css/facts.css">
-
-    <!-- Add Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/main-style.css">
+    
 </head>
 
 <body>
 
-    <!-- Header Section (unchanged) -->
+    <!-- Header Section -->
     <header class="header-space">
         <nav class="navigation-space">
             <div class="left-side">
-                <img class="logo" src="assets/images/A-D KAY-nb1.png" alt="Logo">
+                <a href="index.htm"><img class="logo" src="assets/images/A-D KAY-nb1.png" alt="Logo"></a>
             </div>
             <div class="right-side">
                 <ul class="menu-space">
-                    <li><a href="index.htm">HOME</a></li>
-                    <li><a href="book.htm">BOOK COLLECTION</a></li>
-                    <li><a href="about.htm">ABOUT US</a></li>
-                    <li><a href="#contact">CONTACT US</a></li>
+                  <li><a href="index.htm">HOME</a></li>
+                  <li><a href="books.htm">BOOK COLLECTION</a></li>
+                  <li><a href="authors.htm">AUTHORS</a></li>
+                  <li><a href="blogs.htm">BLOG</a></li>
+                  <li><a href="#about">ABOUT US</a></li>
                 </ul>
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <label class="hamburger-icon">
+                  <input type="checkbox" id="hamburger-checkbox">
+                  <svg viewBox="0 0 32 32">
+                      <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                      <path class="line" d="M7 16 27 16"></path>
+                  </svg>
+              </label>
             </div>
         </nav>
     </header>
 
-    <!-- Main Banner Section (unchanged) -->
+    <!-- Main Banner Section -->
     <section class="main-banner">
-        <video autoplay loop muted class="background-video">
-            <source src="assets/videos/book store.mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="video-overlay">
-            <div class="content">
-                <h6>Hello BookLover</h6>
-                <h2>Welcome to A-D Kay Publications</h2>
-                <p>A-D Kay Publications, we are dedicated to bringing exceptional stories, insightful knowledge, and creative voices to the world. Our passion is to empower authors, readers, and the literary community through high-quality publications.</p>
-                <div class="main-button-blue">
-                    <a href="#contact">Join Us Now!</a>
-                </div>
-            </div>
-        </div>
+      <video autoplay loop muted class="background-video">
+          <source src="assets/videos/cLOUDs.mp4">
+          Your browser does not support the video tag.
+      </video>
+      
+      <div class="video-overlay">
+          <div class="content-image">
+              <img src="assets/images/background/library.jpg"Banner Image">
+              <div class="content">
+                  <h6>Hello Book Lover</h6>
+                  <h2>Welcome to A-D Kay Publications</h2>
+                  <p>A-D Kay Publications, we are dedicated to bringing exceptional stories, insightful knowledge, and creative voices to the world. Our passion is to empower authors, readers, and the literary community through high-quality publications.</p>
+                  <div class="main-button-blue">
+                      <a href="#contact">
+                          <span>Join Us Now!</span>
+                          <span></span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Curtain element - inside banner -->
+      <div class="banner-curtain"></div>
     </section>
 
 
 
     <section class="service-section" id="scroll-stop">
-      <div class="container">
-        <h2 class="section-heading">OUR SERVICES</h2> <!-- Heading inside the container -->
-        <div class="item">
-          <img src="assets/images/services/edit.png" alt="Editing">
-          <h3>Editing & Proofreading</h3>
-          <p>Professional editing to refine your manuscript, ensuring clarity, consistency, and error-free text.</p>
+      <div class="content-wrapper">
+        <!-- Left Side -->
+        <div class="left-side">
+          <img src="assets/images/typewriter.jpg" alt="Services Image">
+          <div class="section-description">We offer a large range of services ranging from publishing to direct sales and marketing</div>
+        <div class="section-heading">What we Offer</div>
         </div>
-        <div class="item">
-          <img src="assets/images/services/book design.png" alt="Book Design">
-          <h3>Book Design & Layout</h3>
-          <p>Custom cover and interior design that reflects your book’s theme and engages readers.</p>
-        </div>
-        <div class="item">
-          <img src="assets/images/services/distribution.png" alt="Distribution">
-          <h3>Printing & Distribution</h3>
-          <p>High-quality printing and worldwide distribution to make your book accessible in bookstores and online.</p>
-        </div>
-        <div class="item">
-          <img src="assets/images/services/marketing.png" alt="Marketing">
-          <h3>Marketing & Promotion</h3>
-          <p>Targeted marketing strategies to increase visibility, from social media campaigns to book launch events.</p>
-        </div>
-        <div class="item">
-          <img src="assets/images/services/licensing.png" alt="Licensing">
-          <h3>Copyright & Licensing</h3>
-          <p>Expert guidance on securing copyrights and managing licensing for global rights and adaptations.</p>
+        <!-- Right Side -->
+        <div class="right-side">
+          <div class="container">
+            
+            <!-- Editing & Proofreading -->
+            <div class="service-section-right-item">
+              <div class="service-section-right-blob"></div>
+              <img src="assets/images/services/edit.png" alt="Editing & Proofreading">
+              <h3>Editing & Proofreading</h3>
+              <p>Meticulous editing and proofreading services to refine your manuscript, ensuring clarity, coherence, and flawless text.</p>
+            </div>
+
+            <!-- Book Design & Layout -->
+            <div class="service-section-right-item">
+              <div class="service-section-right-blob"></div>
+              <img src="assets/images/services/book design.png" alt="Book Design & Layout">
+              <h3>Book Design & Layout</h3>
+              <p>Custom book cover and interior design tailored to reflect your book’s unique theme, captivating readers from first glance.</p>
+            </div>
+
+            <!-- Printing & Distribution -->
+            <div class="service-section-right-item">
+              <div class="service-section-right-blob"></div>
+              <img src="assets/images/services/distribution.png" alt="Printing & Distribution">
+              <h3>Printing & Distribution</h3>
+              <p>High-quality printing and comprehensive distribution services, ensuring your book reaches readers globally, in stores and online.</p>
+            </div>
+
+            <!-- Marketing & Promotion -->
+            <div class="service-section-right-item">
+              <div class="service-section-right-blob"></div>
+              <img src="assets/images/services/marketing.png" alt="Marketing & Promotion">
+              <h3>Marketing & Promotion</h3>
+              <p>Strategic marketing campaigns and promotional efforts, from social media outreach to book launch events, designed to elevate your book’s presence.</p>
+            </div>
+
+            <!-- Copyright & Licensing -->
+            <div class="service-section-right-item">
+              <div class="service-section-right-blob"></div>
+              <img src="assets/images/services/licensing.png" alt="Copyright & Licensing">
+              <h3>Copyright & Licensing</h3>
+              <p>Professional advice and support for securing copyrights and managing global licensing, including film and media adaptations.</p>
+            </div>
+          </div>
         </div>
       </div>
+      </div>
     </section>
+    
+    
     
       
     
@@ -117,8 +146,11 @@
     <section class="book-section">
       <!-- Left-aligned Heading, aligned with the book items -->
       <div class="section-container">
-        <div class="section-heading">OUR BOOK COLLECTION</div> 
+        <div class="section-description">Check out our best selling books</div>
+        <div class="section-heading">Book Collection</div>
         <div class="book-list" id="book-carousel">
+
+          <!--BOOK 1-->
           <div class="book-item">
             <img src="assets/images/books/Culture Brewed in an African Pot.png" alt="Book 1">
             <div class="book-overlay">
@@ -130,12 +162,32 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                 </p>
-                <p class="price">$4.99</p>
-                <a href="#book1" class="view-me">View Me</a>
-                <a href="#book1" class="buy">Buy</a>
+                <a target="_blank" href="book1-details.htm" class="buy" data-tooltip="$3.99">
+                  <div class="button-wrapper">
+                      <div class="text">Buy</div>
+                      <span class="icon">
+                          <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                          </svg>
+                      </span>
+                  </div>
+                </a>
+                <a href="book1-details.htm" class="view-me">
+                  <div class="button-wrapper">
+                      <div class="text">View Me</div>
+                      <span class="icon">
+                          <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                              <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                          </svg>
+                      </span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
+
+          <!--BOOK 2-->
           <div class="book-item">
             <img src="assets/images/books/kbi-front.png" alt="Book 2">
             <div class="book-overlay">
@@ -147,14 +199,34 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star"></span>
                 </p>
-                <p class="price">$3.99</p>
-                <a href="#book2" class="view-me">View Me</a>
-                <a target="_blank" href="https://a.co/d/2KpZVBQ" class="buy">Buy</a>
+                <a target="_blank" href="https://a.co/d/2KpZVBQ" class="buy" data-tooltip="$3.99">
+                  <div class="button-wrapper">
+                      <div class="text">Buy</div>
+                      <span class="icon">
+                          <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                          </svg>
+                      </span>
+                  </div>
+                </a>
+                <a href="book2-details.htm" class="view-me">
+                  <div class="button-wrapper">
+                      <div class="text">View Me</div>
+                      <span class="icon">
+                          <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                              <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                          </svg>
+                      </span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
+
+          <!--BOOK 3-->
           <div class="book-item">
-            <img src="assets/images/books/sok-front.jpg" alt="Book 3">
+            <img src="assets/images/books/sok-front.jpg" alt="Book 6">
             <div class="book-overlay">
               <div class="book-details">
                 <p class="rating">
@@ -164,14 +236,34 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star"></span>
                 </p>
-                <p class="price">$00.00</p>
-                <a href="#book3" class="view-me">View Me</a>
-                <a href="#book3" class="buy">Buy</a>
+                <a target="_blank" href="book2-details.htm" class="buy" data-tooltip="$3.99">
+                  <div class="button-wrapper">
+                      <div class="text">Buy</div>
+                      <span class="icon">
+                          <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                          </svg>
+                      </span>
+                  </div>
+                </a>
+                <a href="book6-details.htm" class="view-me">
+                  <div class="button-wrapper">
+                      <div class="text">View Me</div>
+                      <span class="icon">
+                          <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                              <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                          </svg>
+                      </span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
+
+          <!--BOOK 4-->
           <div class="book-item">
-            <img src="assets/images/books/owl-wisdom.jpg" alt="Book 1">
+            <img src="assets/images/books/Politics for Sale.png" alt="Book 8">
             <div class="book-overlay">
               <div class="book-details">
                 <p class="rating">
@@ -181,14 +273,34 @@
                   <span class="fa fa-star"></span>
                   <span class="fa fa-star"></span>
                 </p>
-                <p class="price">$00.00</p>
-                <a href="#book4" class="view-me">View Me</a>
-                <a href="#book4" class="buy">Buy</a>
+                <a target="_blank" href="book8-details.htm" class="buy" data-tooltip="$3.99">
+                  <div class="button-wrapper">
+                      <div class="text">Buy</div>
+                      <span class="icon">
+                          <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                          </svg>
+                      </span>
+                  </div>
+                </a>
+                <a href="book8-details.htm" class="view-me">
+                  <div class="button-wrapper">
+                      <div class="text">View Me</div>
+                      <span class="icon">
+                          <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                              <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                          </svg>
+                      </span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
+
+          <!--BOOK 5-->
           <div class="book-item">
-            <img src="assets/images/books/particles of wisdom.jpg" alt="Book 2">
+            <img src="assets/images/books/particles of wisdom.jpg" alt="Book 4">
             <div class="book-overlay">
               <div class="book-details">
                 <p class="rating">
@@ -198,40 +310,70 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star"></span>
                 </p>
-                <p class="price">$6.99</p>
-                <a href="#book5" class="view-me">View Me</a>
-                <a href="#book5" class="buy">Buy</a>
-              </div>
-            </div>
-          </div>
-          <div class="book-item">
-            <img src="assets/images/books/kbi-back.png" alt="Book 3">
-            <div class="book-overlay">
-              <div class="book-details">
-                <p class="rating">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <p class="price">$3.99</p>
-                <a href="#book6" class="view-me">View Me</a>
-                <a target="_blank" href="https://a.co/d/2KpZVBQ" class="buy">Buy</a>
+                <a target="_blank" href="book4-details.htm" class="buy" data-tooltip="$3.99">
+                  <div class="button-wrapper">
+                      <div class="text">Buy</div>
+                      <span class="icon">
+                          <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                          </svg>
+                      </span>
+                  </div>
+                </a>
+                <a href="book4-details.htm" class="view-me">
+                  <div class="button-wrapper">
+                      <div class="text">View Me</div>
+                      <span class="icon">
+                          <svg viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                              <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                          </svg>
+                      </span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+      <div class="container">
+          <div class="section-description">Check out our best selling books</div>
+          <div class="section-heading">Latest Blog Posts</div>
+          <div class="blog-posts" id="blog-carousel">
+              <article class="blog-post">
+                  <img src="assets/images/blog/Killed by Illiteracy mockup 1.png" alt="Blog Image">
+                  <h3>Exciting New Release - Killed by Illiteracy by Ampem-Daako Kay</h3>
+                  <p>Announcements for new book releases, giving readers insights into the plot, characters, and themes of the book, as well as details on where to purchase or pre-order.</p>
+                  <a href="blog-post1.htm">Read More</a>
+              </article>
+              <article class="blog-post">
+                  <img src="assets/images/blog/book-club.jpg" alt="Blog Image">
+                  <h3>Join Our Monthly Book Club: Ampem-Daako Book Club</h3>
+                  <p>Information about book clubs, both online and offline, featuring the latest book discussions, author Q&As, and recommendations for group reads.</p>
+                  <a href="#">Read More</a>
+              </article>
+              <article class="blog-post">
+                  <img src="assets/images/blog/memorial.jpg" alt="Blog Image">
+                  <h3>Upcoming Event: Memorial Service for Ampem-Daako Kay</h3>
+                  <p>Join us for a memorial service to honor the life and legacy of Kojo Ampem-Darko, the visionary behind A-D Kay Publications.</p>
+                  <a href="#">Read More</a>
+              </article>
+          </div>
+      </div>
+  </section>
     
 
 
-    <section class="our-facts">
+    <section class="our-facts" id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h2>Here's a few facts about A-D Kay Publications</h2>
+            <div class="section-heading">Discover Key Facts About A-D Kay Publications</div>
             <div class="row">
               <div class="col-lg-6">
                 <div class="count-area-content">
@@ -245,7 +387,7 @@
               </div>
               <div class="col-lg-6">
                 <div class="count-area-content">
-                  <div class="count-digit">15000</div>
+                  <div class="count-digit">8500</div>
                   <div class="count-title">Pages Published</div>
                 </div>
                 <div class="count-area-content">
@@ -264,90 +406,202 @@
                 <img src="assets/images/authors/Ampem-Daako Kay -nb.png" alt="Author Name" class="author-image">
                 <p class="author-name">Ampem-Daako Kay</p>
                 <p class="author-bio">The late founder of A-D Kay Publications, Ampem-Daako Kay, was the heart of the company. He authored most of the books in our collection and passed away last year, leaving behind a legacy that continues to inspire us.</p>
-                <a href="author-profile.html" class="btn btn-primary">Discover More</a>
+                <div class="main-button-blue">
+                  <a href="author-details1.htm">
+                      <span>Discover More</span>
+                      <span></span>
+                  </a>
+                </div>              
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
-    
-    
-    
-    
 
-        
+  <section class="contact-us" id="contact">
+  <div class="container">
+    <div class="row">
+      <!-- Left side: Contact Form -->
+      <div class="col-lg-9">
+        <form id="contact" action="" method="post">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>Let's Get in Touch</h2>
+            </div>
+            <div class="col-lg-4">
+              <fieldset>
+                <input name="name" type="text" id="name" placeholder="YOUR NAME...*" required>
+              </fieldset>
+            </div>
+            <div class="col-lg-4">
+              <fieldset>
+                <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required>
+              </fieldset>
+            </div>
+            <div class="col-lg-4">
+              <fieldset>
+                <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required>
+              </fieldset>
+            </div>
+            <div class="col-lg-12">
+              <fieldset>
+                <textarea name="message" id="message" placeholder="YOUR MESSAGE..." required></textarea>
+              </fieldset>
+            </div>
+            <div class="col-lg-12">
+              <button type="submit" id="form-submit" onclick="sendMail(event)" class="button">
+                <div class="svg-wrapper-1">
+                  <div class="svg-wrapper">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path fill="none" d="M0 0h24v24H0z"/>
+                      <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"/>
+                    </svg>
+                  </div>
+                </div>
+                <span>Send</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+        <!-- Right side: Contact Info -->
+        <div class="col-lg-3">
+          <div class="right-info">
+            <ul>
+              <li>
+                <h6>Phone Number</h6>
+                <span><a href="tel:+233543550766">+233 54-355-0766</a></span>
+              </li>
+              <li>
+                <h6>Email Address</h6>
+                <span><a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></span>
+              </li>
+              <li>
+                <h6>Website URL</h6>
+                <span>www.adkaypublications.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+            <a href="index.htm">
+                <img src="assets/images/A-D KAY-nb1.png" alt="A-D Kay Logo" class="footer-logo-img">
+            </a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="books.htm">Book Collection</a></li>
+                <li><a href="authors.htm">Authors</a></li>
+                <li><a href="404.htm">Blog</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Join Us Section -->
+      <div class="footer-join-us">
+        <h4>Join Us</h4>
+        <ul>
+            <li><a href="apply.htm">Careers/Job Opportunities</a></li>
+            <li><a href="join-team.htm">Join Our Team (Volunteer/Internship)</a></li>
+            <li><a href="submit-manuscript.htm">Submit Manuscript for Review</a></li>
+            <li><a href="supoort.htm">Support Us</a></li>
+        </ul>
+      </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <ul class="social-links">
+                <li><a href="https://facebook.com" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank" class="social-icon twitter">
+                    <i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
+                    <i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+      </div>
+
+      <!-- Copyright & Contact Information -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 A-D Kay Publications. All Rights Reserved.</p>
+        <p>Contact us at <a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></p>
+      </div>
+    </footer>
+
+
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay">
+        <div class="loader-container">
+            <img src="assets/images/A-D KAY-nb1.png" alt="A-D Kay Publications Logo" class="company-logo">
+            <div class="loader"></div>
+        </div>
+    </div>
 
     
-
-
-  
-  <!-- Slick Carousel JS -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-  <script src="assets/js/old/isotope.min.js"></script>
-  <script src="assets/js/old/isotope.js"></script>
-  <script src="assets/js/old/owl-carousel.js"></script>
-  <script src="assets/js/old/lightbox.js"></script>
-  <script src="assets/js/old/tabs.js"></script>
-  <script src="assets/js/old/video.js"></script>
-  <script src="assets/js/old/slick-slider.js"></script>
-  <script src="assets/js/old/custom.js"></script>
-  <script>
-      //according to loftblog tut
-      $('.nav li:first').addClass('active');
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-      var showSection = function showSection(section, isAnimate) {
-        var
-        direction = section.replace(/#/, ''),
-        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-        reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-          $('body, html').animate({
-            scrollTop: reqSectionPos },
-          800);
-        } else {
-          $('body, html').scrollTop(reqSectionPos);
-        }
-
-      };
-
-      var checkSection = function checkSection() {
-        $('.section').each(function () {
-          var
-          $this = $(this),
-          topEdge = $this.offset().top - 80,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-          if (topEdge < wScroll && bottomEdge > wScroll) {
-            var
-            currentId = $this.data('section'),
-            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-            reqLink.closest('li').addClass('active').
-            siblings().removeClass('active');
-          }
+  <!-- Slick Carousel JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+ 
+  <!--EmailJS -->
+  <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "AIpZSo9e2QEerRRAg",
         });
-      };
+    })();
+  </script>
 
-          $(document).ready(function(){
+
+  <script src="assets/js/slick-slider.js"></script>
+
+  <script src="assets/js/custom.js"></script>
+  <script>
+    
+
+
+
+      $(document).ready(function(){
         $('#book-carousel').slick({
           infinite: true,
           slidesToShow: 4,
           slidesToScroll: 1,
           autoplay: true,
-          autoplaySpeed: 4900,
+          autoplaySpeed: 3000,
           responsive: [
             {
               
-              breakpoint: 1500,
+              breakpoint: 1700,
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
@@ -356,14 +610,14 @@
 
             {
               
-              breakpoint: 1000,
+              breakpoint: 1150,
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
               }
             },
             {
-              breakpoint: 500,
+              breakpoint: 800,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -373,14 +627,8 @@
         });
       });
 
-    function toggleMenu() {
-    const menu = document.querySelector('.menu-space');
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
-    menu.classList.toggle('active');
-    hamburgerIcon.classList.toggle('active');
-}
-
   </script>
+
 
 </body>
 

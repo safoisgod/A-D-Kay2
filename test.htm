@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-D Kay Publications</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Loading overlay styles */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(31, 31, 31, 1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 45px;
+            height: 40px;
+            background: linear-gradient(#0000 calc(1*100%/6),#fff 0 calc(3*100%/6),#0000 0),
+                        linear-gradient(#0000 calc(2*100%/6),#fff 0 calc(4*100%/6),#0000 0),
+                        linear-gradient(#0000 calc(3*100%/6),#fff 0 calc(5*100%/6),#0000 0);
+            background-size: 10px 400%;
+            background-repeat: no-repeat;
+            animation: matrix 1s infinite linear;
+        }
+
+        @keyframes matrix {
+            0% { background-position: 0% 100%, 50% 100%, 100% 100%; }
+            100% { background-position: 0% 0%, 50% 0%, 100% 0%; }
+        }
+
+        /* Curtain styles - using a single element with slit effect */
+        .curtain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1a1a1a;
+            z-index: 9997;
+            clip-path: inset(0 50% 0 50%); /* Start with center slit closed */
+            transition: clip-path 0.5s ease-out;
+        }
+
+        .curtain-open .curtain {
+            clip-path: inset(0 0 0 0); /* Fully open */
+        }
+
+        /* Banner Section */
+        .main-banner {
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .video-overlay {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0.9) 100%);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .video-overlay .content {
+            max-width: 800px;
+            width: 100%;
+            opacity: 0;
+        }
+
+        .video-overlay h6 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .video-overlay h2 {
+            font-size: 40px;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+
+        .video-overlay p {
+            max-width: 800px;
+            margin: 15px auto;
+            font-size: 16px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .main-button-blue a {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .main-button-blue a:hover {
+            background: #0056b3;
+        }
+
+        /* Character animation styles */
+        .char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .video-overlay h2 { font-size: 28px; }
+            .video-overlay p { font-size: 14px; }
+            .main-button-blue a { padding: 10px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Banner Section -->
+    <section class="main-banner">
+        <video autoplay loop muted class="background-video">
+            <source src="assets/videos/book store.mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay">
+            <div class="content">
+                <h6>Hello Book Lover</h6>
+                <h2>Welcome to A-D Kay Publications</h2>
+                <p>A-D Kay Publications, we are dedicated to bringing exceptional stories, insightful knowledge, and creative voices to the world. Our passion is to empower authors, readers, and the literary community through high-quality publications.</p>
+                <div class="main-button-blue">
+                    <a href="#contact">
+                        <span>Join Us Now!</span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curtain element (single) -->
+    <div class="curtain"></div>
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.getElementById('loading-overlay');
+            const content = document.querySelector('.content');
+            const mainBanner = document.querySelector('.main-banner');
+            const curtain = document.querySelector('.curtain');
+            
+            // Show loader immediately on page load
+            overlay.style.visibility = 'visible';
+
+            // Split text into characters and wrap in spans
+            function splitTextToChars(element) {
+                const text = element.textContent;
+                element.innerHTML = '';
+                text.split('').forEach(char => {
+                    const span = document.createElement('span');
+                    span.className = 'char';
+                    span.textContent = char === ' ' ? '\u00A0' : char;
+                    element.appendChild(span);
+                });
+            }
+
+            // Apply to h6, h2, and p
+            splitTextToChars(document.querySelector('.video-overlay h6'));
+            splitTextToChars(document.querySelector('.video-overlay h2'));
+            splitTextToChars(document.querySelector('.video-overlay p'));
+
+            // Hide loader and trigger animations after random delay
+            const randomDelay = Math.floor(Math.random() * 2000) + 1000;
+            setTimeout(() => {
+                overlay.style.visibility = 'hidden';
+                
+                // Open curtain from center
+                mainBanner.classList.add('curtain-open');
+                
+                // After curtain opens, start content animation and hide curtain
+                setTimeout(() => {
+                    content.style.opacity = '1';
+                    const chars = document.querySelectorAll('.char');
+                    chars.forEach((char, index) => {
+                        char.style.animationDelay = `${index * 30}ms`;
+                    });
+                    document.body.style.overflow = 'auto';
+                    curtain.style.display = 'none'; // Completely remove curtain after animation
+                }, 5000); // Matches new curtain animation duration (0.5s)
+            }, randomDelay);
+
+            // Show loader and reset curtain when clicking internal links
+            document.querySelectorAll('a').forEach(link => {
+                if (link.hostname === window.location.hostname) {
+                    link.addEventListener('click', (e) => {
+                        if (!link.download && !link.target) {
+                            overlay.style.visibility = 'visible';
+                            mainBanner.classList.remove('curtain-open');
+                            curtain.style.display = 'block'; // Show curtain again for next load
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

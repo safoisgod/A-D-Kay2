@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Exciting new release of Killed by Illiteracy, a thought-provoking book by Ampem-Daako Kay tackling illiteracy and its effects.">
+    <title>Blog - A-D Kay Publications</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/main-style.css">
+    <link rel="stylesheet" href="assets/css/blogs.css">
+
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header-space">
+        <nav class="navigation-space">
+            <div class="left-side">
+                <a href="index.htm"><img class="logo" src="assets/images/A-D KAY-nb1.png" alt="Logo"></a>
+            </div>
+            <div class="right-side">
+                <ul class="menu-space">
+                  <li><a href="index.htm">HOME</a></li>
+                  <li><a href="books.htm">BOOK COLLECTION</a></li>
+                  <li><a href="authors.htm">AUTHORS</a></li>
+                  <li><a href="blogs.htm">BLOG</a></li>
+                  <li><a href="#about">ABOUT US</a></li>
+                  <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+                <label class="hamburger-icon">
+                  <input type="checkbox" id="hamburger-checkbox">
+                  <svg viewBox="0 0 32 32">
+                      <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                      <path class="line" d="M7 16 27 16"></path>
+                  </svg>
+              </label>
+            </div>
+        </nav>
+    </header>
+
+    <section class="search-filter-section">
+        <div class="search-filter-container">
+            <div class="search-filter-box">
+                <div class="searchBox">
+                    <input type="text" class="search-box" id="searchInput" placeholder="Search for blogs..." />
+                    <button onclick="searchBlogPosts()" class="searchButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 29 29" fill="none">
+                            <g clip-path="url(#clip0_2_17)">
+                                <g filter="url(#filter0_d_2_17)">
+                                    <path d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"></path>
+                                </g>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139" height="29.7139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                                    <feOffset dy="4"></feOffset>
+                                    <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                    <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_17"></feBlend>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17" result="shape"></feBlend>
+                                </filter>
+                                <clipPath id="clip0_2_17">
+                                    <rect width="28.0702" height="28.0702" fill="white" transform="translate(0.403503 0.526367)"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Blog Section -->
+    <section class="bl-section">
+        <div class="container">
+            <h2>Latest Blog Posts</h2>
+            <div class="bl-posts" id="blog-carousel">
+                <article class="bl-post">
+                    <img src="assets/images/blog/Killed by Illiteracy mockup 1.png" alt="Blog Image">
+                    <div class="bl-meta">
+                        <span class="bl-author">By Ampem-Daako Kay</span> | 
+                        <span class="bl-date">March 18, 2025</span> | 
+                        <span class="bl-category">Book Release</span>
+                    </div>
+                    <h3>Exciting New Release - Killed by Illiteracy</h3>
+                    <p>Announcements for new book releases, giving readers insights into the plot, characters, and themes of the book, as well as details on where to purchase or pre-order.</p>
+                    <a href="blog-post1.htm">Read More</a>
+                </article>
+                <article class="bl-post">
+                    <img src="assets/images/blog/book-club.jpg" alt="Blog Image">
+                    <div class="bl-meta">
+                        <span class="bl-author">By Ampem-Daako Kay</span> | 
+                        <span class="bl-date">March 10, 2025</span> | 
+                        <span class="bl-category">Book Club</span>
+                    </div>
+                    <h3>Join Our Monthly Book Club</h3>
+                    <p>Information about book clubs, both online and offline, featuring the latest book discussions, author Q&As, and recommendations for group reads.</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article class="bl-post">
+                    <img src="assets/images/authors/Ampem-Daako Kay -nb.png" alt="Blog Image">
+                    <div class="bl-meta">
+                        <span class="bl-author">By Ampem-Daako Kay</span> | 
+                        <span class="bl-date">March 5, 2025</span> | 
+                        <span class="bl-category">Author Spotlight</span>
+                    </div>
+                    <h3>Spotlight on Ampem-Daako Kay</h3>
+                    <p>Features focused on one author, exploring their writing journey, books, influences, and personal stories, giving readers an intimate look into the author’s career.</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article class="bl-post">
+                    <img src="assets/images/blog/submit-book.jpg" alt="Blog Image">
+                    <div class="bl-meta">
+                        <span class="bl-author">By Ampem-Daako Kay</span> | 
+                        <span class="bl-date">February 25, 2025</span> | 
+                        <span class="bl-category">Submission Guide</span>
+                    </div>
+                    <h3>How to Submit Your Manuscript</h3>
+                    <p>A guide for new authors on how to get their work published, what publishers are looking for, and tips to increase chances of success in a competitive market.</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article class="bl-post">
+                    <img src="assets/images/blog/memorial.jpg" alt="Blog Image">
+                    <div class="bl-meta">
+                        <span class="bl-author">By Ampem-Daako Kay</span> | 
+                        <span class="bl-date">February 20, 2025</span> | 
+                        <span class="bl-category">Event</span>
+                    </div>
+                    <h3>Upcoming Event: Memorial Service</h3>
+                    <p>Join us for a memorial service to honor the life and legacy of Kojo Ampem-Darko, the visionary behind A-D Kay Publications.</p>
+                    <a href="#">Read More</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo Section -->
+          <div class="footer-logo">
+              <a href="index.htm">
+                  <img src="assets/images/A-D KAY-nb1.png" alt="A-D Kay Logo" class="footer-logo-img">
+              </a>
+          </div>
+  
+          <!-- Quick Links -->
+          <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                  <li><a href="index.htm">Home</a></li>
+                  <li><a href="books.htm">Book Collection</a></li>
+                  <li><a href="authors.htm">Authors</a></li>
+                  <li><a href="404.htm">Blog</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="#contact">Contact Us</a></li>
+              </ul>
+          </div>
+  
+          <!-- Join Us Section -->
+        <div class="footer-join-us">
+          <h4>Join Us</h4>
+          <ul>
+              <li><a href="apply.htm">Careers/Job Opportunities</a></li>
+              <li><a href="join-team.htm">Join Our Team (Volunteer/Internship)</a></li>
+              <li><a href="submit-manuscript.htm">Submit Manuscript for Review</a></li>
+              <li><a href="supoort.htm">Support Us</a></li>
+          </ul>
+        </div>
+  
+          <!-- Social Media Links -->
+          <div class="footer-social">
+              <h4>Follow Us</h4>
+              <ul class="social-links">
+                  <li><a href="https://facebook.com" target="_blank" class="social-icon facebook">
+                      <i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://twitter.com" target="_blank" class="social-icon twitter">
+                      <i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://instagram.com" target="_blank" class="social-icon instagram">
+                      <i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
+                      <i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+          </div>
+        </div>
+  
+        <!-- Copyright & Contact Information -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 A-D Kay Publications. All Rights Reserved.</p>
+          <p>Contact us at <a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></p>
+        </div>
+      </footer>
+    
+
+    <!-- JavaScript for Search Function -->
+    <script>
+        function searchBlogPosts() {
+            const input = document.getElementById('searchInput')?.value.toLowerCase().trim() || '';
+            const blogPosts = document.querySelectorAll('.bl-post');
+
+            blogPosts.forEach(post => {
+                const title = post.querySelector('h3')?.textContent.toLowerCase() || '';
+                const content = post.querySelector('p')?.textContent.toLowerCase() || '';
+                
+                post.style.display = (title.includes(input) || content.includes(input)) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>
