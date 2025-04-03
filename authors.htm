@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authors - A-D Kay Publications</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,6 @@
                   <li><a href="authors.htm">AUTHORS</a></li>
                   <li><a href="blogs.htm">BLOG</a></li>
                   <li><a href="#about">ABOUT US</a></li>
-                  <li><a href="#contact">CONTACT US</a></li>
                 </ul>
                 <label class="hamburger-icon">
                   <input type="checkbox" id="hamburger-checkbox">
@@ -50,7 +49,7 @@
     <section class="author-list-section">
         <div class="container">
             <h2>Our Authors</h2>
-            <div class="author-grid">
+            <div class="author-grid" id="scroll-stop">
                 <div class="author-card">
                     <img src="assets/images/authors/Ampem-Daako Kay -nb.png" alt="Ampem-Daako Kay">
                     <h3>Ampem-Daako Kay</h3>
@@ -87,60 +86,103 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
     <footer class="footer">
-        <div class="footer-container">
-          <!-- Logo Section -->
-          <div class="footer-logo">
-              <a href="index.htm">
-                  <img src="assets/images/A-D KAY-nb1.png" alt="A-D Kay Logo" class="footer-logo-img">
-              </a>
-          </div>
-  
-          <!-- Quick Links -->
-          <div class="footer-links">
-              <h4>Quick Links</h4>
-              <ul>
-                  <li><a href="index.htm">Home</a></li>
-                  <li><a href="books.htm">Book Collection</a></li>
-                  <li><a href="authors.htm">Authors</a></li>
-                  <li><a href="404.htm">Blog</a></li>
-                  <li><a href="#about">About Us</a></li>
-                  <li><a href="#contact">Contact Us</a></li>
-              </ul>
-          </div>
-  
-          <!-- Join Us Section -->
-        <div class="footer-join-us">
-          <h4>Join Us</h4>
-          <ul>
-              <li><a href="apply.htm">Careers/Job Opportunities</a></li>
-              <li><a href="join-team.htm">Join Our Team (Volunteer/Internship)</a></li>
-              <li><a href="submit-manuscript.htm">Submit Manuscript for Review</a></li>
-              <li><a href="supoort.htm">Support Us</a></li>
-          </ul>
-        </div>
-  
-          <!-- Social Media Links -->
-          <div class="footer-social">
-              <h4>Follow Us</h4>
-              <ul class="social-links">
-                  <li><a href="https://facebook.com" target="_blank" class="social-icon facebook">
-                      <i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="https://twitter.com" target="_blank" class="social-icon twitter">
-                      <i class="fab fa-twitter"></i></a></li>
-                  <li><a href="https://instagram.com" target="_blank" class="social-icon instagram">
-                      <i class="fab fa-instagram"></i></a></li>
-                  <li><a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
-                      <i class="fab fa-linkedin-in"></i></a></li>
-              </ul>
+        <!-- Logo and Motto -->
+        <div class="footer-logo">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <img src="assets/images/A-D KAY-nb1.png" alt="A-D Kay Publications Logo" class="footer-logo-img">
+                <p class="footer-motto">"Rewriting history, one story at a time"</p>
+              </div>
+            </div>
           </div>
         </div>
-  
-        <!-- Copyright & Contact Information -->
+      
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <!-- Quick Links -->
+              <div class="col-lg-3 col-md-6 col-sm-6 footer-col">
+                <div class="widget footer_widget">
+                  <h5 class="footer-title">Quick Links</h5>
+                  <ul class="footer-links">
+                    <li><a href="index.htm">Home</a></li>
+                    <li><a href="books.htm">Book Collection</a></li>
+                    <li><a href="authors.htm">Authors</a></li>
+                    <li><a href="404.htm">Blog</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+      
+              <!-- Join Us Section -->
+              <div class="col-lg-3 col-md-6 col-sm-6 footer-col">
+                <div class="widget footer_widget">
+                  <h5 class="footer-title">Join Us</h5>
+                  <ul class="footer-join-links">
+                    <li><a href="apply.htm">Careers/Job Opportunities</a></li>
+                    <li><a href="join-team.htm">Join Our Team (Volunteer/Internship)</a></li>
+                    <li><a href="submit-manuscript.htm">Submit Manuscript for Review</a></li>
+                    <li><a href="supoort.htm">Support Us</a></li>
+                  </ul>
+                </div>
+              </div>
+      
+              <!-- Contact Form -->
+              <div class="col-lg-3 col-md-12 col-sm-12 footer-col">
+                <div class="widget">
+                  <h5 class="footer-title">Email Us</h5>
+                  <form method="post" id="footer-contact-form" class="contact-form-footer" novalidate="novalidate">
+                    <p><input type="text" name="name" id="footer-name" class="form-control" placeholder="Your Name" required></p>
+                    <p><input type="email" name="email" id="footer-email" class="form-control" placeholder="Your Email" required></p>
+                    <p><textarea name="message" id="footer-message" class="form-control" placeholder="Your Message" rows="4" required></textarea></p>
+                    <p><button type="submit" id="footer-submit" class="button">
+                      <div class="svg-wrapper-1">
+                        <div class="svg-wrapper">
+                          <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"/>
+                            <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <span>Send</span>
+                    </button></p>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Address/Contact Info -->
+              <div class="col-lg-3 col-md-12 col-sm-12 footer-col">
+                <div class="widget footer_widget">
+                  <h5 class="footer-title">Contact Info</h5>
+                  <div class="gem-contacts">
+                    <div class="gem-contacts-item gem-contacts-phone">
+                      <i class="fa fa-phone" aria-hidden="true"></i> Phone: <a href="tel:+233543550766">+233 54-355-0766</a>
+                    </div>
+                    <div class="gem-contacts-item gem-contacts-email">
+                      <i class="fa fa-envelope" aria-hidden="true"></i> Email: <a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a>
+                    </div>
+                    <div class="gem-contacts-item gem-contacts-website">
+                      <i class="fa fa-globe" aria-hidden="true"></i> Website: <a href="http://www.adkaypublications.com" target="_blank">www.adkaypublications.com</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
-          <p>&copy; 2025 A-D Kay Publications. All Rights Reserved.</p>
-          <p>Contact us at <a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></p>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <p>© 2025 A-D Kay Publications. All Rights Reserved. | Contact us at <a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></p>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
 
